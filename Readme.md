@@ -1,4 +1,20 @@
 
+# Network Security with IDS, IPS, NSM
+
+
+## Layers of Network Security- Outward to inward
+- Firewall
+- IDS
+- IPS
+
+## Flags/control bits used in TCP/IP:
+
+URG = Urgent bit
+ACK = Acknowledgment bit
+PSH = Push bit
+RST = Reset bit
+SYN = Synchronize bit
+FIN = Finish bit
 
 ## Differences between Intrusion Detection System (IDS) and Firewalls
 
@@ -116,6 +132,8 @@
 - `Network Security Monitoring (NSM)` 
 - Its main components include network security monitoring (NSM) and security onion
 - Network Security Monitoring and the Snort IDS are the sh*t - the next level from firewal
+
+
 - There are two primary types of IDS
 
 **Signature Based**
@@ -195,4 +213,61 @@ Below are the approaches/
 
 ## Enterprise Security management System using Cyber Threat Hunting
 
+- Snort is a traditional IDS detection engine
+- If the malware is encrypted, it must be installed into the computer- thts wehre EMS and endopoint telemetry become relevant
+
 **Security Onion Setup** 
+1. Setting up a c2 or command and control alert beacon or 'Keep Beacon Alive' - This is to check for any persistent backdoor channel that the hackers might have created via the command and control servers, by setting up alerts
+
+
+
+1.2. Security Controls
+Computer security is often divided into three distinct master categories, commonly referred to as controls:
+
+Physical
+
+Technical
+
+Administrative
+
+These three broad categories define the main objectives of proper security implementation. Within these controls are sub-categories that further detail the controls and how to implement them.
+
+1.2.1. Physical Controls
+Physical control is the implementation of security measures in a defined structure used to deter or prevent unauthorized access to sensitive material. Examples of physical controls are:
+
+Closed-circuit surveillance cameras
+
+Motion or thermal alarm systems
+
+Security guards
+
+Picture IDs
+
+Locked and dead-bolted steel doors
+
+Biometrics (includes fingerprint, voice, face, iris, handwriting, and other automated methods used to recognize individuals)
+
+1.2.2. Technical Controls
+Technical controls use technology as a basis for controlling the access and usage of sensitive data throughout a physical structure and over a network. Technical controls are far-reaching in scope and encompass such technologies as:
+
+Encryption
+
+Smart cards
+
+Network authentication
+
+Access control lists (ACLs)
+
+File integrity auditing software
+
+1.2.3. Administrative Controls
+Administrative controls define the human factors of security. It involves all levels of personnel within an organization and determines which users have access to what resources and information by such means as:
+
+Training and awareness
+
+Disaster preparedness and recovery plans
+
+Personnel recruitment and separation strategies
+
+Personnel registration and accounting
+

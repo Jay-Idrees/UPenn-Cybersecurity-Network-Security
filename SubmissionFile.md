@@ -8,43 +8,43 @@ The concept of defense in depth can be broken down into three different security
 
 1. Walls, bollards, fences, guard dogs, cameras, and lighting are what type of security control?
 
-    Answer:
+    Answer: Physical Security
 
 2. Security awareness programs, BYOD policies, and ethical hiring practices are what type of security control?
 
-    Answer:
+    Answer: Administrative Security
 
 3. Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
 
-    Answer:
+    Answer: Technical Security
 
 #### Intrusion Detection and Attack indicators
 
 1. What's the difference between an IDS and an IPS?
 
-    Answer:
+    Answer: IDS is proactive and IPS is reactive. This means that IDS will be able to detect an attack  while IPS will not only be able to detect an attack but will also be able to block traffic in response. 
 
 2. What's the difference between an Indicator of Attack and an Indicator of Compromise?
 
-   Answer:
+   Answer: Indicators of attack are realtime with the ability to intervene - recording of traffic data enables to recreate a crime scene. There is no real time element in the indicator of compromise
 
 #### The Cyber Kill Chain
 
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
 
-1. Stage 1:
+1. Stage 1: Reconnaissance (passive-no network attck, active- gaining unauthorized access) - to spot security weaknesses in the network of target company
 
-2. Stage 2:
+2. Stage 2: Weaponization - Creating an entry point from the weakest spot
 
-3. Stage 3:
+3. Stage 3: Delivery - Launcing an attack (phishing, USB, compromised user accounts, drive-by download, direct hacking through open port)
 
-4. Stage 4:
+4. Stage 4: Installation - Malware is installed on the network
 
-5. Stage 5:
+5. Stage 5: Lateral Movement - Hackers access additional systems and accounts
 
-6. Stage 6:
+6. Stage 6: Command and control C2- Establishing external network path- for example the hackers may want to use keybord
 
-7. Stage 7:
+7. Stage 7: Execution - the actual harm, which can be data encryption, data exfiltration, data destruction
 
 
 #### Snort Rule Analysis
@@ -59,15 +59,20 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC S
 
 1. Break down the Sort Rule header and explain what is happening.
 
-   Answer:
+   Answer: It instructs to issue an alert abour Potential VNC scan on all source TCP traffic from ports 5800:5820. 
+   - The `msg` provides information regarding the type of an alert. 
+   - `flag:S` (S refers to SYN) and indicates that a connection was accepted. 
+   - The `threshold` sets the limit for the alert to be at most 5. Then there is a link to the emerging threats website- which is a catelog of historical revision of a rule. 
+   - `Class` type indicate the stage of the cyber attack chain, which in this case is `Reconnaissance` 
+   - `sid` is a security identifier uniquely assigned to the snort rule
 
 2. What stage of the Cyber Kill Chain does this alert violate?
 
-   Answer:
+   Answer: Reconnaissance
 
 3. What kind of attack is indicated?
 
-   Answer:
+   Answer: Potential VNC Scan- which searches a range of IPs looking for targets that ae running a VNC server
 
 Snort Rule #2
 
@@ -77,21 +82,21 @@ alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or D
 
 1. Break down the Sort Rule header and explain what is happening.
 
-   Answer:
+   Answer: It instructs to issue an alert for all inbout traffic coming from the port 80 (HTTP) using the protocol HTTP
 
 2. What layer of the Defense in Depth model does this alert violate?
 
-   Answer:
+   Answer: Administrative for policies and procedures
 
 3. What kind of attack is indicated?
 
-   Answer:
+   Answer: PE EXE or DLL Windows file download HTTP
 
 Snort Rule #3
 
 - Your turn! Write a Snort rule that alerts when traffic is detected inbound on port 4444 to the local network on any port. Be sure to include the `msg` in the Rule Option.
 
-    Answer:
+    Answer: `alert tcp $EXTERNAL_NET 4444 -> $HOME_NET any (msg: "ET posstible attack)`
 
 ### Part 2: "Drop Zone" Lab
 

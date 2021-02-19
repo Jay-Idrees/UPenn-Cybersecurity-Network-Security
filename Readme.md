@@ -6,6 +6,22 @@
 - Firewall
 - IDS
 - IPS
+## Firewalls: 
+
+- Either **Host-Based** or **Network Based**
+
+- Inspect the source/destination address/ports, TCP flags, and other features of the incoming packets. Blocking the packets that are not coming from trusted resources
+
+**Types of Firewall**
+- MAC layer - OSI layer 2- filters based on the MAC addresses (compares approved MAC vs sorce MAC)- commonly found on WiFi- Vulnerable to MAC spoofing- the hackers can change the MAC untill it matches. Relies on TCP handshake, no packet inspection
+
+- Packet filtering or stateless firewall- OSI layer 3 and 4 - examines ( source/destination IP, port, IP -defining handshake protocols for data transmission, ingress/egress interface), These firewalls are low maintainance and low cost
+
+- Stateful firewall- OSI layer 3 and 4, combines packet inspection and protocol handshake and further classifies a packet into a state as NEW, ESTABLISHED or ROGUE (no new connection nor belongs to an existing connection) - Does not understand application level protocol, Can be slow , vulnerable to DOS attacks
+
+- Circuit-level gateways - OSI layers 5, rlies on TCP handshake, not rsource intensive, quickly approves of denies traffic. Does not inspect the contents of the packet
+
+- Application/ proxy firewall- OSI layer 7 - Inspcts the contents of the packet, resoure intensive
 
 ## Flags/control bits used in TCP/IP:
 

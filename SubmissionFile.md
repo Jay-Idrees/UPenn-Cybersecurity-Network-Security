@@ -305,21 +305,21 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 1. Name and define two ways an IDS connects to a network.
 
-   Answer 1:
+   Answer 1: Network tap
 
-   Answer 2:
+   Answer 2: Switched port analyzer
 
 2. Describe how an IPS connects to a network.
 
-   Answer:
+   Answer: It is connected physically, by placing it between a switch and a firewall, such that from outward to inward (firewall, IPS, switch)
 
 3. What type of IDS compares patterns of traffic to predefined signatures and is unable to detect Zero-Day attacks?
 
-   Answer:
+   Answer: signature based
 
 4. Which type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?
 
-   Answer:
+   Answer: Anomaly based
 
 #### Defense in Depth
 
@@ -327,72 +327,72 @@ Now, we will work on another lab. Before you start, complete the following revie
 
     1.  A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
 
-        Answer:
+        Answer: Physical controls
 
     2. A zero-day goes undetected by antivirus software.
 
-        Answer:
+        Answer: Technical controls, software
 
     3. A criminal successfully gains access to HR’s database.
 
-        Answer:
+        Answer: Technical control, network
 
     4. A criminal hacker exploits a vulnerability within an operating system.
 
-        Answer:
+        Answer: Technical, software
 
     5. A hacktivist organization successfully performs a DDoS attack, taking down a government website.
 
-        Answer:
+        Answer: Technical control, network
 
     6. Data is classified at the wrong classification level.
 
-        Answer:
+        Answer: Administrative control, policy
 
     7. A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.
 
-        Answer:
+        Answer: Technical, Network
 
 2. Name one method of protecting data-at-rest from being readable on hard drive.
 
-    Answer:
+    Answer: Encryption
 
 3. Name one method to protect data-in-transit.
 
-    Answer:
+    Answer: VPN (Virtual private network)
 
 4. What technology could provide law enforcement with the ability to track and recover a stolen laptop.
 
-   Answer:
+   Answer: Technical control, Laptop tracking software
 
 5. How could you prevent an attacker from booting a stolen laptop using an external hard drive?
 
-    Answer:
+    Answer: Tecnical control, Anti-theft software that can remotely connect and delete files, encryption
 
 
 #### Firewall Architectures and Methodologies
 
 1. Which type of firewall verifies the three-way TCP handshake? TCP handshake checks are designed to ensure that session packets are from legitimate sources.
 
-  Answer:
+  Answer: Circuit level proxy
 
 2. Which type of firewall considers the connection as a whole? Meaning, instead of looking at only individual packets, these firewalls look at whole streams of packets at one time.
 
-  Answer:
+  Answer: Stateful packet filter
 
 3. Which type of firewall intercepts all traffic prior to being forwarded to its final destination. In a sense, these firewalls act on behalf of the recipient by ensuring the traffic is safe prior to forwarding it?
 
-  Answer:
+  Answer: Application of proxy
 
 
 4. Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type- all without opening the packet to inspect its contents?
 
-  Answer:
+  Answer: Packet filtering firewall
 
 
 5. Which type of firewall filters based solely on source and destination MAC address?
 
-  Answer:
+  Answer: MAC firewall
 
 
 

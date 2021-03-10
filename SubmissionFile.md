@@ -124,8 +124,8 @@ By default, these service should be running. If not, then run the following comm
 - Run the commands that enable and start `firewalld` upon boots and reboots.
 
     ```bash
-    $ <ADD COMMAND TO enable firewalld HERE>
-    $ <ADD COMMAND TO  start firewalld HERE>
+    $ <sudo systemctl enable firewalld>
+    $ <sudo systemctl start firewalld>
     ```
 
   Note: This will ensure that `firewalld` remains active after each reboot.
@@ -387,7 +387,7 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 4. Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type- all without opening the packet to inspect its contents?
 
-  Answer: Packet filtering firewall
+  Answer: Packet filtering
 
 
 5. Which type of firewall filters based solely on source and destination MAC address?

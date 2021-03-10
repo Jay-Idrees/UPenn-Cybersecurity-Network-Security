@@ -1,6 +1,15 @@
 
 # Network Security with IDS, IPS, NSM
 
+- Explain how open ports contribute to a computer's attack surface.
+
+- Use firewalls to protect a computer's open ports.
+
+- Decribe various types of firewalls and their use cases.
+
+- Explain the role firewalls play within a layered defense.
+
+- Gain hands-on experience with developing and implementing firewall policies using UFW and firewalld.
 
 ## Layers of Network Security- Outward to inward
 - Firewall
@@ -21,7 +30,13 @@
 
 - `Circuit-level gateways` - OSI layers `5`, rlies on TCP handshake, not rsource intensive, quickly approves of denies traffic. Does not inspect the contents of the packet
 
-- Application/ proxy firewall- OSI layer 7 - Inspcts the contents of the packet, resoure intensive
+- `Application/ proxy firewall`- OSI layer `7` - Inspcts the contents of the packet, resoure intensive
+
+## Setting up firewalls
+
+- 
+
+
 
 ## Flags/control bits used in TCP/IP:
 
@@ -48,7 +63,7 @@
 
 **Network Intrusion Detection System (NIDS)**
 - Matches traffic to attack signatures
-- Difficult todetect by the attackers
+- Difficult to detect by the attackers
 - First line of defence
 
 **Host Based Intrusion System (HIDS)**

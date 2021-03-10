@@ -187,10 +187,10 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the commands that sets your `eth` interfaces to your zones.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=public --change-interface=eth0>
+    $ <sudo firewall-cmd --zone=mail --change-interface=eth0>
+    $ <sudo firewall-cmd --zone=sales --change-interface=eth0>
+    $ <sudo firewall-cmd --zone=web --change-interface=eth0>
     ```
 
 #### Add services to the active zones:

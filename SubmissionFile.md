@@ -135,7 +135,7 @@ By default, these service should be running. If not, then run the following comm
 - Run the command that checks whether or not the `firewalld` service is up and running.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --state>
     ```
 
 
@@ -146,7 +146,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that lists all currently configured firewall rules:
 
     ```bash
-    $ <ADD COMMAND HERE>
+   $ <sudo firewall-cmd --list-all>
     ```
 
 - Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
@@ -156,7 +156,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that lists all currently supported services to see if the service you need is available
 
     ```bash
-    $ <ADD COMMAND HERE>
+   $ <sudo firewalld-cmd --get-services>
     ```
 
 - We can see that the `Home` and `Drop` Zones are created by default.
@@ -177,9 +177,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the commands that creates Web, Sales and Mail zones.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --permanent --new-zone=web>
+    $ <sudo firewall-cmd --permanent --new-zone=mail>
+    $ <sudo firewall-cmd --permanent --new-zone=sales>
     ```
 
 #### Set the zones to their designated interfaces:

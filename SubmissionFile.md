@@ -200,29 +200,29 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Public:
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=public --add-service=smtp>
+    $ <sudo firewall-cmd --zone=public --add-service=http>
+    $ <sudo firewall-cmd --zone=public --add-service=https>
+    $ <sudo firewall-cmd --zone=public --add-service=pop3>
     ```
 
 - Web:
 
     ```bash
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=web --add-service=http>
     ```
 
 - Sales
 
     ```bash
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=sales --add-service=https>
     ```
 
 - Mail
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=mail --add-service=smtp>
+    $ <sudo firewall-cmd --zone=mail --add-service=pop3>
     ```
 
 - What is the status of `http`, `https`, `smtp` and `pop3`?
@@ -232,9 +232,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
 
      ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --permanent --zone=drop --add-source=10.208.56.23>
+    $ <sudo firewall-cmd --permanent --zone=drop --add-source=135.95.103.76>
+    $ <sudo firewall-cmd --permanent --zone=drop --add-source=76.34.169.118>
     ```
 
 #### Make rules permanent then reload them:
@@ -254,7 +254,7 @@ Now, we'll want to provide truncated listings of all currently **active** zones.
 - Run the command that displays all zone services.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --get-active-zones>
     ```
 
 
@@ -273,7 +273,7 @@ Harden your network against `ping` scans by blocking `icmp ehco` replies.
 - Run the command that blocks `pings` and `icmp` requests in your `public` zone.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="138.138.0.3" reject'>
     ```
 
 #### Rule Check
@@ -283,11 +283,11 @@ Now that you've set up your brand new `firewalld` installation, it's time to ver
 - Run the command that lists all  of the rule settings. Do one command at a time for each zone.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    $ <sudo firewall-cmd --zone=public --list-all>
+    $ <sudo firewall-cmd --zone=sales --list-all>
+    $ <sudo firewall-cmd --zone=mail --list-all>
+    $ <sudo firewall-cmd --zone=web --list-all>
+    $ <sudo firewall-cmd --permanent --zone=drop --list-all>
     ```
 
 - Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
